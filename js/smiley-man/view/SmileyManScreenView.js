@@ -38,16 +38,16 @@ define( require => {
       } );
       this.addChild( resetAllButton );
 
-      const circle = new Circle( 30, {
+      const circle = new Circle( 300, {
         fill: 'blue',
         stroke: 'green',
         lineWidth: 5,
-        centerX: 100,
-        centerY: 100
+        centerX: 500,
+        centerY: 300
       } );
       this.addChild( circle );
 
-      const rectangle = new Rectangle( 100, 200, 300, 400, {
+      const rectangle = new Rectangle( 350, 400, 300, 115, {
         fill: 'yellow',
         stroke: 'green',
         lineWidth: 4
