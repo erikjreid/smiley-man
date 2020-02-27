@@ -1,5 +1,5 @@
 // Copyright 2020, University of Colorado Boulder
-
+// ctrl S is save
 /**
  * @author Erik Reid
  */
@@ -22,6 +22,8 @@ define( require => {
      */
     constructor( model, tandem ) {
 
+
+
       super( {
         tandem: tandem
       } );
@@ -38,21 +40,48 @@ define( require => {
       } );
       this.addChild( resetAllButton );
 
-      const circle = new Circle( 300, {
+      const circle = new Circle( 470, {
         fill: 'blue',
         stroke: 'green',
-        lineWidth: 5,
+        lineWidth: 0,
         centerX: 500,
         centerY: 300
       } );
       this.addChild( circle );
 
-      const rectangle = new Rectangle( 350, 400, 300, 115, {
+      const rectangle = new Rectangle( 320, 400, 400, 180, {
         fill: 'yellow',
         stroke: 'green',
-        lineWidth: 4
+        lineWidth: 0
       } );
       this.addChild( rectangle );
+
+
+      
+            const eye = new Circle( 75, {
+        fill: 'green',
+        stroke: 'green',
+        lineWidth: 51,
+        centerX: 500,
+        centerY: 50
+      } );
+      this.addChild( eye );
+
+      const SL = new Rectangle( 230, 200, 150, 375, {
+        fill: 'yellow',
+        stroke: 'green',
+        lineWidth: 0
+      } );
+      this.addChild( SL );
+
+
+const SR = new Rectangle( 650, 200, 150, 375, {
+        fill: 'yellow',
+        stroke: 'green',
+        lineWidth: 0
+      } );
+      this.addChild( SR );
+
     }
 
     /**
