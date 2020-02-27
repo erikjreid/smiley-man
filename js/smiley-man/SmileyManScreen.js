@@ -3,35 +3,32 @@
 /**
  * @author Erik Reid
  */
-define( require => {
-  'use strict';
 
-  // modules
-  const Property = require( 'AXON/Property' );
-  const Screen = require( 'JOIST/Screen' );
-  const smileyMan = require( 'SMILEY_MAN/smileyMan' );
-  const SmileyManModel = require( 'SMILEY_MAN/smiley-man/model/SmileyManModel' );
-  const SmileyManScreenView = require( 'SMILEY_MAN/smiley-man/view/SmileyManScreenView' );
+import Property from '../../../axon/js/Property.js';
+import Screen from '../../../joist/js/Screen.js';
+import SmileyManModel from './SMILEY_MAN/smiley-man/model/SmileyManModel.js';
+import SmileyManScreenView from './SMILEY_MAN/smiley-man/view/SmileyManScreenView.js';
+import smileyMan from './SMILEY_MAN/smileyMan.js';
 
-  class SmileyManScreen extends Screen {
+class SmileyManScreen extends Screen {
 
-    /**
-     * @param {Tandem} tandem
-     */
-    constructor( tandem ) {
+  /**
+   * @param {Tandem} tandem
+   */
+  constructor( tandem ) {
 
-      const options = {
-        backgroundColorProperty: new Property( 'white' ),
-        tandem: tandem
-      };
+    const options = {
+      backgroundColorProperty: new Property( 'white' ),
+      tandem: tandem
+    };
 
-      super(
-        () => new SmileyManModel( tandem.createTandem( 'model' ) ),
-        model => new SmileyManScreenView( model, tandem.createTandem( 'view' ) ),
-        options
-      );
-    }
+    super(
+      () => new SmileyManModel( tandem.createTandem( 'model' ) ),
+      model => new SmileyManScreenView( model, tandem.createTandem( 'view' ) ),
+      options
+    );
   }
+}
 
-  return smileyMan.register( 'SmileyManScreen', SmileyManScreen );
-} );
+smileyMan.register( 'SmileyManScreen', SmileyManScreen );
+export default SmileyManScreen;

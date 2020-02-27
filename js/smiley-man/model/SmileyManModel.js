@@ -3,41 +3,38 @@
 /**
  * @author Erik Reid
  */
-define( require => {
-  'use strict';
 
-  // modules
-  const smileyMan = require( 'SMILEY_MAN/smileyMan' );
+import smileyMan from './SMILEY_MAN/smileyMan.js';
+
+/**
+ * @constructor
+ */
+class SmileyManModel {
 
   /**
-   * @constructor
+   * @param {Tandem} tandem
    */
-  class SmileyManModel {
-
-    /**
-     * @param {Tandem} tandem
-     */
-    constructor( tandem ) {
-      //TODO
-    }
-
-    /**
-     * Resets the model.
-     * @public
-     */
-    reset() {
-      //TODO
-    }
-
-    /**
-     * Steps the model.
-     * @param {number} dt - time step, in seconds
-     * @public
-     */
-    step( dt ) {
-      //TODO
-    }
+  constructor( tandem ) {
+    //TODO
   }
 
-  return smileyMan.register( 'SmileyManModel', SmileyManModel );
-} );
+  /**
+   * Resets the model.
+   * @public
+   */
+  reset() {
+    //TODO
+  }
+
+  /**
+   * Steps the model.
+   * @param {number} dt - time step, in seconds
+   * @public
+   */
+  step( dt ) {
+    //TODO
+  }
+}
+
+smileyMan.register( 'SmileyManModel', SmileyManModel );
+export default SmileyManModel;

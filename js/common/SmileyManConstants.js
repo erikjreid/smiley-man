@@ -5,19 +5,16 @@
  *
  * @author Erik Reid
  */
-define( require => {
-  'use strict';
 
-  // modules
-  const smileyMan = require( 'SMILEY_MAN/smileyMan' );
+import smileyMan from './SMILEY_MAN/smileyMan.js';
 
-  const SmileyManConstants = {
+const SmileyManConstants = {
 
-    SCREEN_VIEW_X_MARGIN: 15,
-    SCREEN_VIEW_Y_MARGIN: 15
+  SCREEN_VIEW_X_MARGIN: 15,
+  SCREEN_VIEW_Y_MARGIN: 15
 
-    //TODO
-  };
+  //TODO
+};
 
-  return smileyMan.register( 'SmileyManConstants', SmileyManConstants );
-} );
+smileyMan.register( 'SmileyManConstants', SmileyManConstants );
+export default SmileyManConstants;
