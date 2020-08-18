@@ -11,8 +11,9 @@ define( require => {
   const VerticalAquaRadioButtonGroup = require('SUN/VerticalAquaRadioButtonGroup');
   const Circle = require( 'SCENERY/nodes/Circle' );
   const Text = require( 'SCENERY/nodes/Text' );
+  const Path = require( 'SCENERY/nodes/Path' );
    const Node = require( 'SCENERY/nodes/Node' );
-
+const Shape = require( 'KITE/Shape' );
   const Rectangle = require( 'SCENERY/nodes/Rectangle' );
   const ResetAllButton = require( 'SCENERY_PHET/buttons/ResetAllButton' );
   const ScreenView = require( 'JOIST/ScreenView' );
@@ -381,8 +382,32 @@ left:rectangle.right
       } );
       this.addChild( resetAllButton );
 
+      const H = new Rectangle( 790, 250, 80, 260, {
+        fill: 'yellow',
+        stroke: 'green',
+        lineWidth: 0,
+left:200
+      } );
+      
+this.addChild( H );
+
+
 
       this.addChild(radioButtonGroup);
+
+      const shape = new Shape();
+      shape.moveTo(0,0);
+      shape.lineTo(140,130);
+      shape.lineTo(1090,300);
+      //shape.lineTo(0,0);
+      //shape.arc(30,200,60,21,Math.PI,true)
+      //shape.close();
+      const path = new Path(shape,{
+        lineWidth:5,
+        fill:'yellow',
+        stroke:'black'
+      });
+      this.addChild(path);
     }
 
     /**
